@@ -14,6 +14,15 @@ $font-path: "../assets/fonts";
 
 
 
+$background-color: rgba(49, 49, 49, 1);
+$toolbar-background: rgba(73, 73, 73, 1);
+$text-color: rgba(202, 202, 202, 1);
+
+$toolbar-ios-title-text-color: rgba(202, 202, 202, 1);
+//$toolbar-title-text-color: rgba(202, 202, 202, 1);
+//$toolbar-md-title-text-color: rgba(202, 202, 202, 1);
+
+
 
 // Named Color Variables
 // --------------------------------------------------
@@ -22,6 +31,7 @@ $font-path: "../assets/fonts";
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
+
 
 $colors: (
   primary:    #387ef5,
@@ -76,3 +86,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
