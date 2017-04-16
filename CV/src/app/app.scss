@@ -12,6 +12,7 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 
@@ -22,7 +23,8 @@ body, span, button, li, h1, h3, h4, h5, h6, p, ion-item, ion-title {
 h2 {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
-  text-shadow: -1.5px 0 rgba(49, 49, 49, 1), 0 1.5px rgba(49, 49, 49, 1), .5px 0 rgba(49, 49, 49, 1), 0 -1.5px rgba(49, 49, 49, 1);
+  text-shadow: -1.5px 0 rgba(49, 49, 49, 1), 0 1.5px rgba(49, 49, 49, 1),
+  1px 0 rgba(49, 49, 49, 1), 0 -1.5px rgba(49, 49, 49, 1);
 }
 
 ion-slide {
@@ -38,4 +40,20 @@ ion-slide {
   }
 }
 
+.card-md {
+  background-color: rgba(200, 221, 226, 1);
+  color: rgba(49, 49, 49, 1);
+  box-shadow: 3px 3px 3px 3px rgba(35, 35, 35, 0.5);
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .card-title-md {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+}
 

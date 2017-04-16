@@ -7,20 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-
-<ion-content padding>
-
-  <p>TODO:</p>
-  <li>Mõtle, mida teha</li>
-  <li>Tee ilus disain vt värve</li>
-  <li>backend</li>
-  <li>CV</li>
-  <li>motivatsioonikiri</li>
-  <li>Lisa ise pilte</li>
-  <li>Muuda ionic default sinine ära</li>
-  <li>Muuda ionic default icon ära</li>
-  <br>
-
+<ion-content class="home">
 
   <ion-slides pager>
 
@@ -38,4 +25,12 @@
 
   </ion-slides>
 
-</ion-content>
+  <ion-list>
+    <ion-item *ngFor="let person of people">
+      <ion-avatar item-left>
+        <img src="{{person.picture.thumbnail}}">
+      </ion-avatar>
+      <h2>{{person.name.first}} {{person.name.last}}</h2>
+      <p>{{person.email}}</p>
+    </ion-item>
+  </ion-list>

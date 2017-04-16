@@ -4,11 +4,11 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
+
 import { HomePage } from '../pages/home/home';
 import { MotivationLetterPage } from '../pages/motivation-letter/motivation-letter';
 import { CVPage } from '../pages/cv/cv';
+import { ChatPage } from '../pages/chat/chat';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,8 +31,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'CV', component: CVPage },
       { title: 'Motivation Letter', component: MotivationLetterPage },
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'Chat', component: ChatPage }
     ];
   }
 
