@@ -8,18 +8,46 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <ion-card>
-    <ion-card-content>
-      <ion-card-title>
-          Nine Inch Nails Live
-      </ion-card-title>
-      <p>
-        The most popular industrial group ever, and largely
-        responsible for bringing the music to a mass audience.
-      </p>
-    </ion-card-content>
-  </ion-card>
+
+  <!--<ion-list>-->
+  <!--<button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">-->
+  <!--<ion-icon name="{{item.icon}}" item-left></ion-icon>-->
+  <!--{{item.title}}-->
+  <!--<div class="item-note" item-right>-->
+  <!--{{item.note}}-->
+  <!--</div>-->
+  <!--</button>-->
+  <!--</ion-list>-->
+  <!--<div *ngIf="selectedItem" padding>-->
+  <!--You navigated here from <b>{{selectedItem.title}}</b>-->
+  <!--</div>-->
+
+  <div class="cv-card">
+    <ion-item *ngFor="let item of qualificationsInfo">
+      <ion-card>
+        <ion-card-content>
+          <ion-card-title>
+            {{item.type}}
+          </ion-card-title>
+          <ion-list>
+            <p>{{parseDetailInfo(item.details)}}</p>
+          </ion-list>
+        </ion-card-content>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              {{parseDate(item.time)}}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-item>
+  </div>
 
 </ion-content>

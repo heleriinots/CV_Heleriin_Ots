@@ -2,7 +2,7 @@
  * Created by Heleriin on 04/04/2017.
  */
 
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
 
 
 @Component({

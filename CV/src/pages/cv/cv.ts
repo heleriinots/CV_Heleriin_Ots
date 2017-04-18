@@ -2,19 +2,61 @@
  * Created by Heleriin on 18/03/2017.
  */
 
-import { Component } from '@angular/core';
 
+import moment from "moment";
+import {Component} from "@angular/core";
+import {cvDataService} from "../../providers/cv-data-service";
+import {NavController} from "ionic-angular";
+
+// import { CVDetailPage } from '../cv-detail/cv-detail';
 
 @Component({
   selector: 'cv-ionic',
-  templateUrl: 'cv.html'
+  templateUrl: 'cv.html',
+  providers: [cvDataService]
 })
+
 
 export class CVPage {
 
-  constructor() {
+  // selectedItem: any;
 
+  public qualificationsInfo: any;
+
+  // constructor(public navCtrl: NavController, public navParams: NavParams, public cvDataService: cvDataService){
+
+  constructor(public navCtrl: NavController, public cvDataService: cvDataService) {
+
+    // this.selectedItem = navParams.get('item');
+
+    this.loadCVData();
+  }
+
+  // itemTapped(event, item) {
+  //   this.navCtrl.push(CVDetailPage, {
+  //     item: item
+  //   });
+  // }
+
+  loadCVData() {
+    this.cvDataService.load()
+      .then(data => {
+        this.qualificationsInfo = data;
+      });
+  }
+
+
+  parseDate(datetime) {
+    var data = moment().format(datetime);
+    return moment(data).format('DD.MM:YYYY hh:mm:ss');
+  }
+
+
+  parseDetailInfo(details) {
+    if (details.length >= 30) {
+      details = details.substr(0, 30) + "...";
+    }
+    return details;
   }
 
 }
-

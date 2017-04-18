@@ -1,14 +1,14 @@
-import { Component, ViewChild } from '@angular/core';
+import {Component, ViewChild} from "@angular/core";
 
-import { Platform, MenuController, Nav } from 'ionic-angular';
+import {MenuController, Nav, Platform} from "ionic-angular";
 
-import { StatusBar, Splashscreen } from 'ionic-native';
+import {Splashscreen, StatusBar} from "ionic-native";
 
 
-import { HomePage } from '../pages/home/home';
-import { MotivationLetterPage } from '../pages/motivation-letter/motivation-letter';
-import { CVPage } from '../pages/cv/cv';
-import { ChatPage } from '../pages/chat/chat';
+import {HomePage} from "../pages/home/home";
+import {MotivationLetterPage} from "../pages/motivation-letter/motivation-letter";
+import {CVPage} from "../pages/cv/cv";
+import {ChatPage} from "../pages/chat/chat";
 
 @Component({
   templateUrl: 'app.html'
@@ -16,38 +16,30 @@ import { ChatPage } from '../pages/chat/chat';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // make HelloIonicPage the root (or first) page
   rootPage: any = HomePage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
-  constructor(
-    public platform: Platform,
-    public menu: MenuController
-  ) {
+  constructor(public platform: Platform,
+              public menu: MenuController) {
     this.initializeApp();
 
-    // set our app's pages
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'CV', component: CVPage },
-      { title: 'Motivation Letter', component: MotivationLetterPage },
-      { title: 'Chat', component: ChatPage }
+      {title: 'Home', component: HomePage},
+      {title: 'CV', component: CVPage},
+      {title: 'Motivation Letter', component: MotivationLetterPage},
+      {title: 'Chat', component: ChatPage}
     ];
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
   }
 
   openPage(page) {
-    // close the menu when clicking a link from the menu
     this.menu.close();
-    // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
 }

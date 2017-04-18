@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-
-import { NavController } from 'ionic-angular';
+import {Component} from "@angular/core";
+import {NavController} from "ionic-angular";
 import {PeopleService} from "../../providers/people-service";
 
 
@@ -12,22 +11,22 @@ import {PeopleService} from "../../providers/people-service";
 
 export class HomePage {
 
-  /*
-  constructor() {
-
-  }
-  */
-
   public people: any;
 
-  constructor(public navCtrl: NavController, public peopleService: PeopleService){
+  slideData = [{title: "Slide 1", info: "Additional info 1"}, {title: "Slide 2", info: "Additional info 1"},
+    {title: "Slide 3", info: "Additional info 3"}]
+
+
+  constructor(public navCtrl: NavController, public peopleService: PeopleService) {
     this.loadPeople();
   }
 
-  loadPeople(){
+
+  loadPeople() {
     this.peopleService.load()
       .then(data => {
         this.people = data;
+        console.log(this.people);
       });
   }
 

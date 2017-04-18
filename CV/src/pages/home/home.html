@@ -7,23 +7,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="home">
 
-  <ion-slides pager>
+<ion-content padding>
 
-    <ion-slide>
-      <h2>Slide 1</h2>
+
+  <ion-slides autoplay="4000" loop="true" speed="3000">
+    <ion-slide *ngFor="let slide of slideData">
+      <h2>{{slide.title}}</h2>
+      <p>{{slide.info}}</p>
     </ion-slide>
-
-    <ion-slide>
-      <h2>Slide 2</h2>
-    </ion-slide>
-
-    <ion-slide>
-      <h2>Slide 3</h2>
-    </ion-slide>
-
   </ion-slides>
+
+  <br>
+
+  <div id="container">
+    <div class="element" id="first"></div>
+    <div class="element" id="second"></div>
+    <div class="element" id="third"></div>
+  </div>
+
+  <br>
 
   <ion-list>
     <ion-item *ngFor="let person of people">
@@ -34,3 +37,9 @@
       <p>{{person.email}}</p>
     </ion-item>
   </ion-list>
+
+
+</ion-content>
+
+
+
