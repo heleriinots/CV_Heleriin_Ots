@@ -26,7 +26,7 @@
 
   <div class="cv-card">
     <ion-item *ngFor="let item of qualificationsInfo">
-      <ion-card>
+      <ion-card (click)="itemTapped($event, item)">
         <ion-card-content>
           <ion-card-title>
             {{item.type}}

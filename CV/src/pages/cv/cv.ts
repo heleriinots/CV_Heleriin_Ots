@@ -4,11 +4,10 @@
 
 
 import moment from "moment";
-import {Component} from "@angular/core";
-import {cvDataService} from "../../providers/cv-data-service";
-import {NavController} from "ionic-angular";
-
-// import { CVDetailPage } from '../cv-detail/cv-detail';
+import { Component } from "@angular/core";
+import { cvDataService } from "../../providers/cv-data-service";
+import { NavController, NavParams } from "ionic-angular";
+import { CVDetailPage } from '../cv-detail/cv-detail';
 
 @Component({
   selector: 'cv-ionic',
@@ -19,24 +18,15 @@ import {NavController} from "ionic-angular";
 
 export class CVPage {
 
-  // selectedItem: any;
-
+  selectedItem: any;
   public qualificationsInfo: any;
 
-  // constructor(public navCtrl: NavController, public navParams: NavParams, public cvDataService: cvDataService){
 
-  constructor(public navCtrl: NavController, public cvDataService: cvDataService) {
-
-    // this.selectedItem = navParams.get('item');
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, public cvDataService: cvDataService) {
+    this.selectedItem = navParams.get('item');
     this.loadCVData();
   }
 
-  // itemTapped(event, item) {
-  //   this.navCtrl.push(CVDetailPage, {
-  //     item: item
-  //   });
-  // }
 
   loadCVData() {
     this.cvDataService.load()
@@ -59,4 +49,9 @@ export class CVPage {
     return details;
   }
 
+  itemTapped(event, item) {
+    this.navCtrl.push(CVDetailPage, {
+      item: item
+    });
+  }
 }
