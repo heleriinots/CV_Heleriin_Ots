@@ -43,15 +43,15 @@ export class CVPage {
 
 
   parseDetailInfo(details) {
-    if (details.length >= 30) {
-      details = details.substr(0, 30) + "...";
+    if (details.length >= 28) {
+      details = details.substr(0, 28) + "...";
     }
     return details;
   }
 
   itemTapped(event, item) {
     this.navCtrl.push(CVDetailPage, {
-      item: item
+      item: this.qualificationsInfo
     });
   }
 }

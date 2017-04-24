@@ -41,7 +41,7 @@ VALUES (9, 'Work Experience', '05.2014-08.2014 Radisson Blu Hotel Olümpia - Bre
                                          principal course, Assistant Teacher');
 
 INSERT INTO QualificationsInfo (id, type, details)
-VALUES (10, 'Languages', 'Estonian
+VALUES (10, 'Languages', 'Estonian (native speaker)
                                   English (Cambridge English Advanced C2 certificate)
                                   French (DELF B2 certificate)
                                   Russian');

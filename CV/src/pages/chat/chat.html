@@ -10,6 +10,24 @@
 
 <ion-content padding>
 
-
+    <ion-list>
+      <ion-item *ngFor="let message of messages">{{ message.author }}: {{message.message}}</ion-item>
+    </ion-list>
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+
+    <div id="first">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="chat_input" placeholder="Write message to chatbot"></ion-input>
+    </ion-item>
+    </div>
+
+    <div id="second">
+    <button ion-button block (click)="send(chat_input)">Send</button>
+    </div>
+
+  </ion-toolbar>
+</ion-footer>
