@@ -15,10 +15,10 @@
       <ion-card (click)="itemTapped($event, item)">
         <ion-card-content>
           <ion-card-title>
-            {{item.type}}
+            {{ item.type }}
           </ion-card-title>
           <ion-list>
-            <p>{{parseDetailInfo(item.details)}}</p>
+            <p>{{ parseDetailInfo(item.details) }}</p>
           </ion-list>
         </ion-card-content>
         <ion-row>
@@ -28,7 +28,7 @@
           </ion-col>
           <ion-col center text-center>
             <ion-note>
-              {{parseDate(item.time)}}
+              {{ parseDate(item.time) }}
             </ion-note>
           </ion-col>
         </ion-row>

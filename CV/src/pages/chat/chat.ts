@@ -17,11 +17,18 @@ export class ChatPage {
   messages = [];
 
   constructor() {
+    /*
     if (this.messages.length === 0) {
       this.messages = JSON.parse(localStorage.getItem("messages"));
-      this.generateRandomSentence();
     }
+    */
   }
+
+
+  parseTime(time) {
+    return  moment(time).fromNow();
+  }
+
 
   eventHandler(keyCode, message) {
     if(keyCode === 13) {
@@ -31,7 +38,7 @@ export class ChatPage {
 
   send(message) {
     if (message != '' && message != null) {
-      var time = moment().format('DD.MM:YYYY hh:mm:ss')
+      var time = moment();
       this.messages.unshift({author: 'Guest', message: message, class: 'guest', time: time});
       this.generateChatbotMessage();
     }
@@ -42,33 +49,42 @@ export class ChatPage {
   }
 
   generateChatbotMessage() {
-    var time = moment().format('DD.MM:YYYY hh:mm:ss')
-    this.messages.unshift({author: 'Chatbot', message: 'blah', class: 'chatbot', time: time});
+    var time = moment();
+    this.messages.unshift({author: 'Chatbot', message: this.generateRandomSentence(), class: 'chatbot', time: time});
   }
 
 
-  verbs = [["go to", "goes to", "going to", "went to", "gone to"],
-    ["look at", "looks at", "looking at", "looked at", "looked at"],
-    ["choose", "chooses", "choosing", "chose", "chosen"]];
+  verbs = [
+    //["go to", "goes to", "going to", "went to", "gone to"],
+    //["look at", "looks at", "looking at", "looked at", "looked at"],
+    //["choose", "chooses", "choosing", "chose", "chosen"],
+    ["like", "likes", "liking", "liked", "liked"],
+    ["love", "loves", "loving", "loved", "loved"]
+  ];
 
-  tenses = [{name:"Present", singular:1, plural:0, format:"%subject %verb %complement"},
-    {name:"Past", singular:3, plural:3, format:"%subject %verb %complement"},
-    {name:"Present Continues", singular:2, plural:2, format:"%subject %be %verb %complement"}];
+  tenses = [
+    {name:"Present", singular:1, plural:0, format:"%subject %verb %complement"},
+    {name:"Past", singular:3, plural:3, format:"%subject %verb %complement"}
+    //{name:"Present Continues", singular:2, plural:2, format:"%subject %be %verb %complement"}
+    ];
 
-  subjects = [{name:"I", be:"am", singular:0},
-    {name:"You", be:"are", singular:0},
-    {name:"He", be:"is", singular:1}];
+  subjects = [
+    {name:"I", be:"am", singular:0},
+    {name:"You", be:"are", singular:0}
+    //{name:"He", be:"is", singular:1}
+    ];
 
-  complementsForVerbs = [["cinema", "Egypt", "home", "concert"],
-    ["for a map", "them", "the stars", "the lake"],
-    ["a book for reading", "a dvd for tonight"]];
+  complementsForVerbs = [
+    //["cinema", "Egypt", "home", "concert"],
+    //["for a map", "them", "the stars", "the lake"],
+    //["a book for reading", "a dvd for tonight"],
+    ["php", "java", "this app", "css", "programming", "talking with you", "javascript", "python"],
+    ["php", "java", "this app", "css", "programming", "talking with you", "javascript", "python"]];
 
 
   random(words) {
     return words[Math.floor(Math.random()*words.length)];
   }
-
-  //lisa id värk dictionary'sse ja tee sellest json
 
 
   generateRandomSentence() {

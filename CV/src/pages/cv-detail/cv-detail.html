@@ -3,14 +3,18 @@
     <button menuToggle *ngIf="!selectedItem">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Item Details</ion-title>
+    <ion-title>{{ selectedItem.type }}</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
-
-
-  <p>{{ selectedItem.type }}</p>
+  <ion-list>
+    <ion-item *ngFor="let line of lines">
+      <p>
+        {{ line }}
+      </p>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

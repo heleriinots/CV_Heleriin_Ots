@@ -14,7 +14,7 @@
         <div class={{message.class}}>
           <p>{{message.author}}:</p>
           <b>{{ message.message }}</b>
-          <p>{{message.time}}</p>
+          <p>{{ parseTime(message.time) }}</p>
         </div>
       </ion-item>
     </ion-list>
@@ -27,7 +27,7 @@
     <div id="first">
     <ion-item>
       <ion-input type="text" [(ngModel)]="chat_input"
-                 placeholder="Write message to chatbot"
+                 placeholder="Write your message here"
                  (keypress)="eventHandler($event.keyCode, chat_input)"></ion-input>
     </ion-item>
     </div>
