@@ -12,6 +12,7 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 
@@ -45,7 +46,6 @@ ion-slide {
   .toolbar-title {
     font-family: 'Lobster', cursive;
     font-size: 2.1rem;
-    text-align: center;
   }
 }
 
@@ -85,8 +85,13 @@ ion-item {
 
 }
 
-.label-ios {
-  margin: 0px 8px 0px 0;
+.label-ios,
+.label-md {
+  margin: 2px 8px 2px 0;
+}
+
+.item {
+  margin-top: 0.4rem;
 }
 
 .md ion-list > .item:last-child,
@@ -111,12 +116,12 @@ ion-item {
   margin-top: 13px;
   margin-bottom: 13px;
 
-  .item-ios.item-block .item-inner {
-    border-bottom: none;
+  .item-inner {
+    border-bottom: none !important;
   }
 
 }
 
-
+//
 
 

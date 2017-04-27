@@ -16,7 +16,6 @@ con.connect(function (err) {
         console.log('Error connecting to the database');
         return;
     }
-    console.log('Connection established');
 });
 
 

@@ -1,17 +1,61 @@
 chat-ionic {
 
   #first {
+    width: 73%;
     float: left;
     margin: 0.3rem;
+
+    .item {
+      box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(35, 35, 35, 0.3);
+    }
   }
 
   #second {
+    width: 23%;
     float: left;
     margin: 0.3rem;
+
+    .button {
+      background-color: rgba(200, 221, 226, 1);
+      color: rgba(49, 49, 49, 1);
+      font-weigth: bold;
+      box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(35, 35, 35, 0.3);
+    }
   }
 
   .item-ios.item-block .item-inner {
     border-bottom: none;
+  }
+
+  .item {
+    font-size: 1.6rem;
+  }
+
+  .label {
+    white-space: inherit;
+    text-align: justify;
+    overflow: none;
+  }
+
+  .guest {
+    padding: 1rem 1rem 1rem 1rem;
+    border: 2px solid rgba(35, 35, 35, 1);
+    border-radius: 8px;
+    color: rgba(49, 49, 49, 1);
+    background-color: rgba(200, 221, 226, 1);
+    position: relative;
+    width: 85%;
+    float: right;
+  }
+
+  .chatbot {
+    padding: 1rem 1rem 1rem 1rem;
+    border: 2px solid rgba(35, 35, 35, 1);
+    border-radius: 8px;
+    color: rgba(49, 49, 49, 1);
+    background-color: #cacaca;
+    width: 85%;
+    float: left;
   }
 
 }

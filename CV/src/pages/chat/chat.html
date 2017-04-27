@@ -3,15 +3,20 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Chat</ion-title>
+    <ion-title>Chatbot</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
     <ion-list>
-      <ion-item *ngFor="let message of messages">{{ message.author }}: {{message.message}}</ion-item>
+      <ion-item *ngFor="let message of messages">
+        <div class={{message.class}}>
+          <p>{{message.author}}:</p>
+          <b>{{ message.message }}</b>
+          <p>{{message.time}}</p>
+        </div>
+      </ion-item>
     </ion-list>
 
 </ion-content>
@@ -21,7 +26,9 @@
 
     <div id="first">
     <ion-item>
-      <ion-input type="text" [(ngModel)]="chat_input" placeholder="Write message to chatbot"></ion-input>
+      <ion-input type="text" [(ngModel)]="chat_input"
+                 placeholder="Write message to chatbot"
+                 (keypress)="eventHandler($event.keyCode, chat_input)"></ion-input>
     </ion-item>
     </div>
 

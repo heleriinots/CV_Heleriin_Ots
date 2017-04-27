@@ -51,7 +51,7 @@ export class CVPage {
 
   itemTapped(event, item) {
     this.navCtrl.push(CVDetailPage, {
-      item: this.qualificationsInfo
+      item:item
     });
   }
 }

@@ -27,7 +27,7 @@ export class MyApp {
       {title: 'Home', component: HomePage},
       {title: 'CV', component: CVPage},
       {title: 'Motivation Letter', component: MotivationLetterPage},
-      {title: 'Chat', component: ChatPage}
+      {title: 'Chatbot', component: ChatPage}
     ];
   }
 
