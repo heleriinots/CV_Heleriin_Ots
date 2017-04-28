@@ -7,8 +7,13 @@ import {Component} from "@angular/core";
 
 export class HomePage {
 
-  slideData = [{title: "Slide 1", info: "Additional info 1"}, {title: "Slide 2", info: "Additional info 1"},
-    {title: "Slide 3", info: "Additional info 3"}]
+  slideData = [
+    {title: "Welcome to the CV app", info: "Additional info"},
+    {title: "Explore the possibilities", info: "Additional info"},
+    {title: "Get acquainted with the CV", info: "Additional info"},
+    {title: "Have a chat with the Chatbot", info: "Additional info"},
+    {title: "Read the motivation letter", info: "Additional info"}
+  ];
 
 
   constructor() {

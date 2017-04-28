@@ -9,15 +9,15 @@
 
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let message of messages" class="item-background">
-      <div class={{message.class}}>
-        <p>{{ message.author }}:</p>
-        <b>{{ message.message }}</b>
-        <p>{{ formatTime(message.time) }}</p>
-      </div>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+      <ion-item *ngFor="let message of messages" class="item-background">
+        <div class={{message.style}}>
+          <p>{{ message.author }}:</p>
+          <b>{{ message.message }}</b>
+          <p>{{ formatTime(message.time) }}</p>
+        </div>
+      </ion-item>
+    </ion-list>
 
 </ion-content>
 
@@ -25,15 +25,15 @@
   <ion-toolbar>
 
     <div id="first">
-      <ion-item>
-        <ion-input type="text" [(ngModel)]="chat_input"
-                   placeholder="Write your message here"
-                   (keypress)="eventHandler($event.keyCode, chat_input)"></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="chat_input"
+                 placeholder="Write your message here"
+                 (keypress)="eventHandler($event.keyCode, chat_input)"></ion-input>
+    </ion-item>
     </div>
 
     <div id="second">
-      <button ion-button block (click)="send(chat_input)">Send</button>
+    <button ion-button block (click)="send(chat_input)">Send</button>
     </div>
 
   </ion-toolbar>
