@@ -16,6 +16,7 @@ chat-ionic {
     margin: 0.3rem;
 
     .button {
+      height: 4.5rem;
       background-color: rgba(200, 221, 226, 1);
       color: rgba(49, 49, 49, 1);
       font-weigth: bold;
@@ -23,9 +24,11 @@ chat-ionic {
     }
   }
 
-  .item-ios.item-block .item-inner {
+  .item-ios.item-block .item-inner,
+  .item-md.item-block .item-inner {
     border-bottom: none;
   }
+
 
   .item {
     font-size: 1.6rem;
