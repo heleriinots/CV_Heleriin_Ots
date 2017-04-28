@@ -165,12 +165,12 @@ export class ChatPage {
   }
 
 
-  static formatTime(time) {
+  formatTime(time) {
     return moment(time).fromNow();
   }
 
 
-  static sleep(milliseconds) {
+  sleep(milliseconds) {
     let start = new Date().getTime();
     for (let i = 0; i < 1e7; i++) {
       if ((new Date().getTime() - start) > milliseconds) {
@@ -187,7 +187,7 @@ export class ChatPage {
   }
 
 
-  static random(words) {
+  random(words) {
     return words[Math.floor(Math.random() * words.length)];
   }
 
