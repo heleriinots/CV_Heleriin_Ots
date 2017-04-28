@@ -7,9 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-
 
   <ion-slides autoplay="4000" loop="true" speed="3000">
     <ion-slide *ngFor="let slide of slideData">
@@ -17,27 +15,6 @@
       <p>{{slide.info}}</p>
     </ion-slide>
   </ion-slides>
-
-  <br>
-
-  <div id="container">
-    <div class="element" id="first"></div>
-    <div class="element" id="second"></div>
-    <div class="element" id="third"></div>
-  </div>
-
-  <br>
-
-  <ion-list>
-    <ion-item *ngFor="let person of people">
-      <ion-avatar item-left>
-        <img src="{{person.picture.thumbnail}}">
-      </ion-avatar>
-      <h2>{{person.name.first}} {{person.name.last}}</h2>
-      <p>{{person.email}}</p>
-    </ion-item>
-  </ion-list>
-
 
 </ion-content>
 

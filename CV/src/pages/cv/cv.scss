@@ -1,2 +1,41 @@
 cv-ionic {
+
+  ion-content {
+      background-image: linear-gradient(transparent, rgba(49, 49, 49, 0.9), rgba(49, 49, 49, 1)),
+        url("https://www.pentaxforums.com/gallery/images/4842/1_IMGP3475-Edit.jpg");
+      background-size: cover;
+  }
+
+  .item {
+    background-color: transparent;
+  }
+
+  .card {
+    margin: 0px 12px 5px 12px;
+    background-color: rgba(200, 221, 226, 0.85);
+    color: rgba(49, 49, 49, 1);
+    box-shadow: 3px 3px 3px 3px rgba(35, 35, 35, 0.6);
+
+    p {
+      color: rgba(49, 49, 49, 1);
+      font-size: 1.6rem;
+    }
+
+    .note {
+      color: rgba(49, 49, 49, 1);
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.4rem;
+      margin-right: 1rem;
+    }
+
+    .card-title {
+      color: rgba(49, 49, 49, 1);
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+  }
+
 }

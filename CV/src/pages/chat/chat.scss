@@ -31,6 +31,10 @@ chat-ionic {
     font-size: 1.6rem;
   }
 
+  .item-background {
+    background-color: transparent;
+  }
+
   .label {
     white-space: inherit;
     text-align: justify;
@@ -39,10 +43,10 @@ chat-ionic {
 
   .guest {
     padding: 1rem 1rem 1rem 1rem;
-    border: 2px solid rgba(35, 35, 35, 1);
+    border: 1px solid rgba(35, 35, 35, 0.3);
     border-radius: 8px;
     color: rgba(49, 49, 49, 1);
-    background-color: rgba(200, 221, 226, 1);
+    background-color: rgba(200, 221, 226, 0.85);
     position: relative;
     width: 85%;
     float: right;
@@ -50,12 +54,22 @@ chat-ionic {
 
   .chatbot {
     padding: 1rem 1rem 1rem 1rem;
-    border: 2px solid rgba(35, 35, 35, 1);
+    border: 1px solid rgba(35, 35, 35, 0.3);
     border-radius: 8px;
-    color: rgba(49, 49, 49, 1);
+    color: rgba(49, 49, 49, 0.85);
     background-color: #cacaca;
     width: 85%;
     float: left;
+  }
+
+  .item-inner {
+    border-bottom: none;
+  }
+
+  ion-content {
+    background-image: linear-gradient(rgba(49, 49, 49, 0.9), rgba(49, 49, 49, 0.95), rgba(49, 49, 49, 1)),
+      url("https://www.pentaxforums.com/gallery/images/4842/1_IMGP3475-Edit.jpg");
+    background-size: cover;
   }
 
 }
