@@ -47,12 +47,11 @@ INSERT INTO QualificationsInfo (id, type, details)
 VALUES (11, 'Driver\'s License', 'B category driver\'s license');
 
 INSERT INTO QualificationsInfo (id, type, details)
-VALUES (12, 'IT Skills', 'I would consider Java to be the language that I have the most experience with, since I have
- successfully passed two Java courses at TTU and I am currently working as an assistant teacher of the Principal
- Course of Programming in Java. I have also practiced quite a bit of Python and worked as an assitant teacher for the
-  In-depth Basic Course of Programming, which is a Python course. I have grasped the basics of C++, JavaScript,
-  jQuery, PHP, html, CSS and Sass and I have some experience with Node.js, AngularJS and Angular2. With regard to databases I have previously studied and used SQL, mainly in combination with MySQL. Currently I am working on an ionic application in a team of developers for the European Universities Debating Championship 2017. This project has taught me a lot about which tools and practices are used to develop larger projects, as well as how teamwork and project management are usually organised in IT companies.');
+VALUES (12, 'IT Skills', 'I would consider Java to be the language that I have the most experience with, since I have successfully passed two Java courses at TTU and I am currently working as an assistant teacher of the Principal Course of Programming in Java.
+I have also practiced quite a bit of Python and worked as an assitant teacher for the In-depth Basic Course of Programming, which is a Python course.
+I have grasped the basics of C++, JavaScript, jQuery, PHP, html, CSS and Sass and I have some experience with Node.js, AngularJS and Angular2.
+With regard to databases I have previously studied and used SQL, mainly in combination with MySQL.
+Currently I am working on an ionic application in a team of developers for the European Universities Debating Championship 2017. This project has taught me a lot about which tools and practices are used to develop larger projects, as well as how teamwork and project management are usually organised in IT companies.');
 
 INSERT INTO QualificationsInfo (id, type, details)
-VALUES (13, 'Hobbies', 'During my spare time I enjoy drawing and playing musical instruments, mainly the guitar and
-occasionally the piano. I am also an active debater and a board member of the TTU Debate Society.');
+VALUES (13, 'Hobbies', 'During my spare time I enjoy drawing and playing musical instruments, mainly the guitar and occasionally the piano. I am also an active debater and a board member of the TTU Debate Society.');
