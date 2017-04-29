@@ -55,6 +55,7 @@ export class ChatPage {
     }
   }
 
+
   startChat() {
     let time = moment();
     this.messages.unshift({author: 'Chatbot', message: "Hello, what's your name?", style: 'chatbot', time: time});
@@ -67,7 +68,7 @@ export class ChatPage {
   }
 
   sendMessageOne(message) {
-    this.sleep(200);
+    this.sleep(100);
     this.messages.unshift({
       author: 'Guest',
       message: message,
@@ -92,7 +93,7 @@ export class ChatPage {
   }
 
   sendMessageTwo(message) {
-    this.sleep(200);
+    this.sleep(100);
     this.messages.unshift({
       author: 'Guest',
       message: message,
@@ -118,7 +119,7 @@ export class ChatPage {
   }
 
   sendMessageThree(message) {
-    this.sleep(200);
+    this.sleep(100);
     this.messages.unshift({
       author: 'Guest',
       message: message,
@@ -182,7 +183,7 @@ export class ChatPage {
 
   generateChatbotMessage() {
     let time = moment();
-    this.sleep(200);
+    this.sleep(100);
     this.messages.unshift({author: 'Chatbot', message: this.generateRandomSentence(), style: 'chatbot', time: time});
   }
 
