@@ -24,7 +24,9 @@ export class cvDataService {
     }
 
     return new Promise((resolve) => {
-      this.http.get('http://localhost:8800')
+
+      this.http.get('http://188.166.164.8:8800/')
+      //this.http.get('http://localhost:8800')
 
         .map(res => {
           console.log(res);

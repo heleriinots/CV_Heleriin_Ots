@@ -4,7 +4,6 @@
   "dependencies": {
     "express": "^4.15.2",
     "mysql": "^2.5.4",
-    "siege": "^0.2.0",
-    "socket.io": "^1.7.3"
+    "siege": "^0.2.0"
   }
 }
