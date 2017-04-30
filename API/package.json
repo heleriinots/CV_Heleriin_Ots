@@ -3,8 +3,13 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "^4.15.2",
+<<<<<<< HEAD
     "mysql": "^2.13.0",
     "siege": "^0.2.0",
     "socket.io": "^1.7.3"
+=======
+    "mysql": "^2.5.4",
+    "siege": "^0.2.0"
+>>>>>>> 28b023f265909fa7838bad3037cbf38d5f9db35e
   }
 }
