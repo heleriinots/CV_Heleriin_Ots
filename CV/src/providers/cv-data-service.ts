@@ -29,7 +29,6 @@ export class cvDataService {
       //this.http.get('http://localhost:8800')
 
         .map(res => {
-          console.log(res);
           return res.json()
         })
         .subscribe(data => {
