@@ -15,6 +15,7 @@ export class ChatPage {
 
   chat_input: string;
   messages = [];
+  default_messages = [];
   count;
   verbs = [
     ["like", "likes", "liking", "liked", "liked"],
@@ -46,6 +47,9 @@ export class ChatPage {
   ];
 
   constructor() {
+    if (localStorage["messages"] == undefined) {
+      localStorage["messages"] = JSON.stringify(this.default_messages);
+    }
     this.messages = JSON.parse(localStorage.getItem("messages"));
     if (this.messages.length == 0) {
       this.count = 0;
