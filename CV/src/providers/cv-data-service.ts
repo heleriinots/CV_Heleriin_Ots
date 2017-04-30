@@ -34,7 +34,6 @@ export class cvDataService {
         })
         .subscribe(data => {
           this.qualificationsInfo = data.qualificationsData;
-          console.log(this.qualificationsInfo);
           resolve(this.qualificationsInfo);
         });
 

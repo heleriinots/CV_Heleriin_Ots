@@ -63,11 +63,13 @@ export class ChatPage {
     this.messages.unshift({author: 'Chatbot', message: "Hello, what's your name?", style: 'chatbot', time: time});
   }
 
+
   eventHandler(keyCode, message) {
     if (keyCode === 13) {
       this.send(message);
     }
   }
+
 
   sendMessageOne(message) {
     this.sleep(100);
