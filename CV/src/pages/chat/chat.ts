@@ -46,12 +46,10 @@ export class ChatPage {
   ];
 
   constructor() {
-    if (this.messages.length === 0) {
-      this.messages = JSON.parse(localStorage.getItem("messages"));
-      if (this.messages.length == 0) {
-        this.count = 0;
-        this.startChat();
-      }
+    this.messages = JSON.parse(localStorage.getItem("messages"));
+    if (this.messages.length == 0) {
+      this.count = 0;
+      this.startChat();
     }
   }
 

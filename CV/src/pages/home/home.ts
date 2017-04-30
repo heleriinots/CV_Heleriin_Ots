@@ -8,11 +8,11 @@ import {Component} from "@angular/core";
 export class HomePage {
 
   slideData = [
-    {title: "Welcome to the CV app", info: "Additional info"},
-    {title: "Explore the possibilities", info: "Additional info"},
-    {title: "Get acquainted with the CV", info: "Additional info"},
-    {title: "Have a chat with the Chatbot", info: "Additional info"},
-    {title: "Read the motivation letter", info: "Additional info"}
+    {title: "Welcome to the CV app"},
+    {title: "Explore the possibilities"},
+    {title: "Get acquainted with the CV"},
+    {title: "Have a chat with the Chatbot"},
+    {title: "Read the motivation letter"}
   ];
 
 
