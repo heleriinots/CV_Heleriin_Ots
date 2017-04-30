@@ -4,10 +4,10 @@
 
 
 import moment from "moment";
-import { Component } from "@angular/core";
-import { cvDataService } from "../../providers/cv-data-service";
-import { NavController, NavParams } from "ionic-angular";
-import { CVDetailPage } from '../cv-detail/cv-detail';
+import {Component} from "@angular/core";
+import {cvDataService} from "../../providers/cv-data-service";
+import {NavController, NavParams} from "ionic-angular";
+import {CVDetailPage} from "../cv-detail/cv-detail";
 
 @Component({
   selector: 'cv-ionic',
@@ -37,7 +37,7 @@ export class CVPage {
 
 
   parseDate(datetime) {
-    var data = moment().format(datetime);
+    let data = moment().format(datetime);
     return moment(data).format('DD.MM:YYYY hh:mm:ss');
   }
 
@@ -51,7 +51,7 @@ export class CVPage {
 
   itemTapped(event, item) {
     this.navCtrl.push(CVDetailPage, {
-      item:item
+      item: item
     });
   }
 }
