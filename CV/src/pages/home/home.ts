@@ -15,7 +15,6 @@ export class HomePage {
     {title: "Read the motivation letter"}
   ];
 
-
   constructor() {
   }
 
